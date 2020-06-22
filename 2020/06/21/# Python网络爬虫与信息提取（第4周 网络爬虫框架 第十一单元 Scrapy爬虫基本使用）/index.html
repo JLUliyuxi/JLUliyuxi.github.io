@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="# Python网络爬虫与信息提取（第4周 网络爬虫框架 第十一单元 Scrapy爬虫基本使用）"><meta name="keywords" content=""><meta name="author" content="LyC"><meta name="copyright" content="LyC"><title># Python网络爬虫与信息提取（第4周 网络爬虫框架 第十一单元 Scrapy爬虫基本使用） | LyC's Blog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="LyC's Blog" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python网络爬虫与信息提取（第4周-网络爬虫框架）"><span class="toc-number">1.</span> <span class="toc-text"># Python网络爬虫与信息提取（第4周 网络爬虫框架）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Scrapy爬虫的第一个实例"><span class="toc-number">1.1.</span> <span class="toc-text">Scrapy爬虫的第一个实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yield关键字的使用"><span class="toc-number">1.2.</span> <span class="toc-text">yield关键字的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scrapy爬虫的基本使用"><span class="toc-number">1.3.</span> <span class="toc-text">Scrapy爬虫的基本使用</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://i.loli.net/2020/05/17/HbaOsFvjp8c9MRE.jpg"></div><div class="author-info__name text-center">LyC</div><div class="author-info__description text-center">药学 自由人 爱好者</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">13</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://i.loli.net/2020/05/12/jFsUgX9TBbnQu2o.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">LyC's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title"># Python网络爬虫与信息提取（第4周 网络爬虫框架 第十一单元 Scrapy爬虫基本使用）</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-21</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Python网络爬虫与信息提取（第4周-网络爬虫框架）"><a href="#Python网络爬虫与信息提取（第4周-网络爬虫框架）" class="headerlink" title="# Python网络爬虫与信息提取（第4周 网络爬虫框架）"></a># Python网络爬虫与信息提取（第4周 网络爬虫框架）</h1><hr>
+<h2 id="Scrapy爬虫的第一个实例"><a href="#Scrapy爬虫的第一个实例" class="headerlink" title="Scrapy爬虫的第一个实例"></a>Scrapy爬虫的第一个实例</h2><p>演示HTML页面地址：     </p>
+<p><a href="http://python123.io/ws/demo.html" target="_blank" rel="noopener">http://python123.io/ws/demo.html</a>    </p>
+<p>文件名称：demo.html</p>
+<p><strong>爬虫步骤：</strong>   </p>
+<ol>
+<li>建立一个Scrapy爬虫工程<br>在工程路径下打开cmd, 输入<code>scrapy stratproject python123demo</code>,定义一个名为python123demo的文件夹  </li>
+</ol>
+<p><img src="https://i.loli.net/2020/06/21/bAQupzMg26taRKX.png" alt=""></p>
+<p>随后打开路径，会发现已经建立好了一个文件夹   </p>
+<p><img src="https://i.loli.net/2020/06/21/wH123tiZGexsd9b.png" alt=""></p>
+<p>生成的工程路径： </p>
+<p><img src="https://i.loli.net/2020/06/21/4kyHIgZ78iR2vfd.png" alt=""></p>
+<p><img src="https://i.loli.net/2020/06/21/uOcdYtlCspKI1Qh.png" alt=""></p>
+<ol start="2">
+<li>在工程中产生一个Scrapy爬虫<br>进入python123demo,cmd输入<code>scrapy genspider demo python123.io</code>产生名为demo的spider</li>
+</ol>
+<p><img src="https://i.loli.net/2020/06/21/JDwHBoA8zhUExbv.png" alt="生成一条名称为demo的spider"></p>
+<p>生成爬虫的代码内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">#demo.py文件</span><br><span class="line">import scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class DemoSpider(scrapy.Spider):</span><br><span class="line">    name &#x3D; &#39;demo&#39;   #名称</span><br><span class="line">    allowed_domains &#x3D; [&#39;python123.io&#39;]  #只能爬虫这个域名以下的链接</span><br><span class="line">    start_urls &#x3D; [&#39;http:&#x2F;&#x2F;python123.io&#x2F;&#39;]   #爬取页面的初始页面</span><br><span class="line"></span><br><span class="line">    def parse(self, response):</span><br><span class="line">        pass</span><br></pre></td></tr></table></figure>
+
+<p><strong>parse()用于处理响应，解析内容形成字典，发现新的URL爬取请求。</strong></p>
+<ol start="3">
+<li>配置产生的spider爬虫<br>对上述spider进行配置：  </li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">import scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class DemoSpider(scrapy.Spider):</span><br><span class="line">    name &#x3D; &#39;demo&#39;</span><br><span class="line">    allowed_domains &#x3D; [&#39;python123.io&#39;]</span><br><span class="line">    start_urls &#x3D; [&#39;http:&#x2F;&#x2F;python123.io&#x2F;ws&#x2F;demo.html&#39;]</span><br><span class="line"></span><br><span class="line">    def parse(self, response):</span><br><span class="line">        fname &#x3D; response.url.split(&#39;&#x2F;&#39;)[-1] #存储到本地的response文件名称</span><br><span class="line">        with open(fname, &#39;wb&#39;) as f :</span><br><span class="line">            f.write(response.body)</span><br><span class="line">        self.log(&quot;Saved file %s.&quot; % name)</span><br><span class="line">        pass</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>运行爬虫，获取网页<br>cmd内输入<code>scrapy crawl demo</code>，捕获页面存储在html文件中</li>
+</ol>
+<p><img src="https://i.loli.net/2020/06/21/zI2sELjWvt3frpF.png" alt=""></p>
+<h2 id="yield关键字的使用"><a href="#yield关键字的使用" class="headerlink" title="yield关键字的使用"></a>yield关键字的使用</h2><p>生成器是一个不断产生值的函数。      </p>
+<p>包含yield语句的函数是一个生成器。     </p>
+<p>生成器每次产生一个值(yield语句)，函数被冻结，被唤醒后再产生一个值。</p>
+<p><strong><em>生成器写法：</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def gen(n) :</span><br><span class="line">    for i in range(n) :</span><br><span class="line">        yield i ** 2</span><br><span class="line"></span><br><span class="line">for i in gen(5):</span><br><span class="line">    print(i, &#39; &#39;, end&#x3D;&#39;&#39;)</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>普通写法：</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def square(n) :</span><br><span class="line">    ls &#x3D; [i**2 for i in range(n)]</span><br><span class="line">    return ls</span><br><span class="line"></span><br><span class="line">for i in square(5):</span><br><span class="line">    print(i, &#39; &#39;, end&#x3D;&#39;&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>生成器：<br>更节省存储空间<br>响应更迅速<br>使用更灵活   </p>
+<h2 id="Scrapy爬虫的基本使用"><a href="#Scrapy爬虫的基本使用" class="headerlink" title="Scrapy爬虫的基本使用"></a>Scrapy爬虫的基本使用</h2><p><strong>Scrapy爬虫的使用步骤</strong></p>
+<p>步骤一：创建一个工程和Spider模板     </p>
+<p>步骤二：编写Spider    </p>
+<p>步骤三：编写Item Pipeline     </p>
+<p>步骤四：优化配置策略      </p>
+<p><strong>Scrapy爬虫的数据类型</strong></p>
+<p>Request类：表示一个HTTP请求，由Spider生成，由Downloader执行。    </p>
+<table>
+<thead>
+<tr>
+<th align="center">属性或方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.url</td>
+<td align="center">Request对应的请求URL地址</td>
+</tr>
+<tr>
+<td align="center">.method</td>
+<td align="center">对应的请求方法，’GET’ ‘POST’等</td>
+</tr>
+<tr>
+<td align="center">.headers</td>
+<td align="center">字典类型风格的请求头</td>
+</tr>
+<tr>
+<td align="center">.body</td>
+<td align="center">请求内容主体，字符串类型</td>
+</tr>
+<tr>
+<td align="center">.meta</td>
+<td align="center">用户添加的扩展信息，在Scrapy内部模块间传递信息使用</td>
+</tr>
+<tr>
+<td align="center">.copy()</td>
+<td align="center">复制该请求</td>
+</tr>
+</tbody></table>
+<p>Response类：表示一个HTTP响应，由Downloader生成，由Spider处理</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性或方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.url</td>
+<td align="center">Response对应的URL地址</td>
+</tr>
+<tr>
+<td align="center">.status</td>
+<td align="center">HTTP状态码，默认是200</td>
+</tr>
+<tr>
+<td align="center">.headers</td>
+<td align="center">Response对应的头部信息</td>
+</tr>
+<tr>
+<td align="center">.body</td>
+<td align="center">Response对应的内容信息，字符串类型</td>
+</tr>
+<tr>
+<td align="center">.flags</td>
+<td align="center">一组标记</td>
+</tr>
+<tr>
+<td align="center">.request</td>
+<td align="center">产生Response类型对应的Request对象</td>
+</tr>
+<tr>
+<td align="center">.copy()</td>
+<td align="center">复制该响应</td>
+</tr>
+</tbody></table>
+<p>Item类：表示从一个HTML页面中提取的信息内容，由Spider生成，由Item Pipeline处理<br>类似于字典，可用字典类型使用      </p>
+<p><strong>CSS Selector的基本使用：</strong></p>
+<p><img src="https://i.loli.net/2020/06/21/fjLIdzmBqwYDb65.png" alt=""></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">LyC</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jluliyuxi.github.io/2020/06/21/#%20Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC4%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%20%E7%AC%AC%E5%8D%81%E4%B8%80%E5%8D%95%E5%85%83%20Scrapy%E7%88%AC%E8%99%AB%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%EF%BC%89/">https://jluliyuxi.github.io/2020/06/21/#%20Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC4%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%20%E7%AC%AC%E5%8D%81%E4%B8%80%E5%8D%95%E5%85%83%20Scrapy%E7%88%AC%E8%99%AB%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%EF%BC%89/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://JLUliyuxi.github.io">LyC's Blog</a>！</span></div></div><div class="post-meta__tag-list"></div><nav id="pagination"><div class="next-post pull-right"><a href="/2020/06/21/%E4%BB%8E%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5%E5%B9%B4%E6%9C%88%E6%97%A5%EF%BC%8C%E8%AE%A1%E7%AE%97%E6%98%AF%E8%BF%99%E4%B8%80%E5%B9%B4%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9/"><span>从键盘输入年月日，计算是这一年中的第几天</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://i.loli.net/2020/05/12/jFsUgX9TBbnQu2o.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2020 By LyC</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" data-click="false"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
