@@ -248,15 +248,17 @@
     <link href="https://jluliyuxi.github.io/2020/06/07/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC0%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F%EF%BC%89/"/>
     <id>https://jluliyuxi.github.io/2020/06/07/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC0%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F%EF%BC%89/</id>
     <published>2020-06-07T13:50:21.805Z</published>
-    <updated>2020-06-20T11:48:01.621Z</updated>
+    <updated>2020-06-23T09:10:58.076Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Python网络爬虫与信息提取（第0周-网络爬虫前奏）"><a href="#Python网络爬虫与信息提取（第0周-网络爬虫前奏）" class="headerlink" title="Python网络爬虫与信息提取（第0周 网络爬虫前奏）"></a>Python网络爬虫与信息提取（第0周 网络爬虫前奏）</h1><p>引言：最近在学习北理嵩天的这门课，便在个人博客里做一下笔记，方面以后学习使用。</p><hr><h2 id="1-课程内容导学"><a href="#1-课程内容导学" class="headerlink" title="1.课程内容导学"></a>1.课程内容导学</h2><h3 id="Requests库"><a href="#Requests库" class="headerlink" title="Requests库"></a>Requests库</h3><p>自动爬取HTML页面 自动网络提交请求</p><h3 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h3><p>网络爬虫排除协议</p><h3 id="Beautiful-Soup"><a href="#Beautiful-Soup" class="headerlink" title="Beautiful Soup"></a>Beautiful Soup</h3><p>解析HTML页面</p><h3 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h3><p>实战项目A/B</p><h3 id="Re"><a href="#Re" class="headerlink" title="Re"></a>Re</h3><p>正则表达式详解 提取页面关键信息</p><h3 id="Scrapy"><a href="#Scrapy" class="headerlink" title="Scrapy*"></a>Scrapy*</h3><p>网络爬虫原理介绍 专业爬虫框架介绍</p><hr><h2 id="2-IDE选择"><a href="#2-IDE选择" class="headerlink" title="2.IDE选择"></a>2.IDE选择</h2><p>目前我自己使用的文本工具类IDE是<strong><em>Sublime Text3</em></strong>,集成工具类IDE是<strong><em>PyCharm</em></strong>。    </p><p>等这个课学完，下一个学习数据处理和分析课，再学习使用<strong><em>Anaconda</em></strong>。</p>]]></content>
+    <content type="html"><![CDATA[<p>引言：最近在学习北理嵩天的这门课，便在个人博客里做一下笔记，方面以后学习使用。</p><hr><h1 id="1-课程内容导学"><a href="#1-课程内容导学" class="headerlink" title="1.课程内容导学"></a>1.课程内容导学</h1><h2 id="Requests库"><a href="#Requests库" class="headerlink" title="Requests库"></a>Requests库</h2><p>自动爬取HTML页面 自动网络提交请求</p><h2 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h2><p>网络爬虫排除协议</p><h2 id="Beautiful-Soup"><a href="#Beautiful-Soup" class="headerlink" title="Beautiful Soup"></a>Beautiful Soup</h2><p>解析HTML页面</p><h2 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h2><p>实战项目A/B</p><h2 id="Re"><a href="#Re" class="headerlink" title="Re"></a>Re</h2><p>正则表达式详解 提取页面关键信息</p><h2 id="Scrapy"><a href="#Scrapy" class="headerlink" title="Scrapy*"></a>Scrapy*</h2><p>网络爬虫原理介绍 专业爬虫框架介绍</p><hr><h1 id="2-IDE选择"><a href="#2-IDE选择" class="headerlink" title="2.IDE选择"></a>2.IDE选择</h1><p>目前我自己使用的文本工具类IDE是<strong><em>Sublime Text3</em></strong>,集成工具类IDE是<strong><em>PyCharm</em></strong>。   </p><p>等这个课学完，下一个学习数据处理和分析课，再学习使用<strong><em>Anaconda</em></strong>。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Python网络爬虫与信息提取（第0周-网络爬虫前奏）&quot;&gt;&lt;a href=&quot;#Python网络爬虫与信息提取（第0周-网络爬虫前奏）&quot; class=&quot;headerlink&quot; title=&quot;Python网络爬虫与信息提取（第0周 网络爬虫前奏）&quot;&gt;&lt;/a&gt;Pytho
+        &lt;p&gt;引言：最近在学习北理嵩天的这门课，便在个人博客里做一下笔记，方面以后学习使用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;1-课程内容导学&quot;&gt;&lt;a href=&quot;#1-课程内容导学&quot; class=&quot;headerlink&quot; title=&quot;1.课程内容导学&quot;&gt;&lt;/a&gt;1.课程内容导学&lt;/
       
     
     </summary>
