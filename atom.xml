@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jluliyuxi.github.io/"/>
-  <updated>2020-06-22T09:27:26.702Z</updated>
+  <updated>2020-07-10T14:33:46.529Z</updated>
   <id>https://jluliyuxi.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python数据分析与展示（第0周 数据分析之前奏）</title>
+    <link href="https://jluliyuxi.github.io/2020/07/10/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC0%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E5%89%8D%E5%A5%8F%EF%BC%89/"/>
+    <id>https://jluliyuxi.github.io/2020/07/10/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC0%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E5%89%8D%E5%A5%8F%EF%BC%89/</id>
+    <published>2020-07-10T13:47:51.138Z</published>
+    <updated>2020-07-10T14:33:46.529Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="“数据分析”课程内容导学"><a href="#“数据分析”课程内容导学" class="headerlink" title="“数据分析”课程内容导学"></a>“数据分析”课程内容导学</h1><p>NumPy库，Matplotlib库，Pandas库      </p><p><strong>摘要</strong>：有损地提取数据特征的过程<br>※基本统计(含排序)<br>※分布/累计统计<br>※数据特征，相关性、周期性等<br>※数据挖掘(形成知识)     </p><p><strong><em>建议使用Anaconda IDE</em></strong>      </p><p><strong><em>理解和掌握 conda Spyder IPython 的使用</em></strong>        </p><p><strong>内容组织</strong>：<br>绘制坐标系、饼图、直方图、极坐标图、散点图<br>实例1：图像的手绘效果<br>实例2：引力波的绘制<br>实例3：房价趋势的关联因素分析<br>实例4：股票数据的趋势分析曲线     </p><h1 id="Anaconda-IDE的基本使用"><a href="#Anaconda-IDE的基本使用" class="headerlink" title="Anaconda IDE的基本使用"></a>Anaconda IDE的基本使用</h1><h2 id="包管理和环境管理工具-conda"><a href="#包管理和环境管理工具-conda" class="headerlink" title="包管理和环境管理工具-conda"></a>包管理和环境管理工具-conda</h2><p>包管理与pip类似，管理Python第三方库      </p><p>环境管理能够允许用户使用不同版本的Python，并能灵活切换。</p><p>启动cmd,执行<code>conda --version</code>，可获取conda版本号</p><h2 id="Anaconda-一个集合，包括conda、某版本Python、一批第三方库等。"><a href="#Anaconda-一个集合，包括conda、某版本Python、一批第三方库等。" class="headerlink" title="Anaconda:一个集合，包括conda、某版本Python、一批第三方库等。"></a>Anaconda:一个集合，包括conda、某版本Python、一批第三方库等。</h2><h2 id="编程工具：Spyder"><a href="#编程工具：Spyder" class="headerlink" title="编程工具：Spyder"></a>编程工具：Spyder</h2><p>包括编辑区、文件导航和IPython      </p><h2 id="交互式编程环境：IPython"><a href="#交互式编程环境：IPython" class="headerlink" title="交互式编程环境：IPython"></a>交互式编程环境：IPython</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;“数据分析”课程内容导学&quot;&gt;&lt;a href=&quot;#“数据分析”课程内容导学&quot; class=&quot;headerlink&quot; title=&quot;“数据分析”课程内容导学&quot;&gt;&lt;/a&gt;“数据分析”课程内容导学&lt;/h1&gt;&lt;p&gt;NumPy库，Matplotlib库，Pandas库    
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python网络爬虫与信息提取（第4周 网络爬虫框架 第十一单元 股票数据Scrapy爬虫）</title>
+    <link href="https://jluliyuxi.github.io/2020/07/03/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC4%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%20%E7%AC%AC%E5%8D%81%E4%B8%80%E5%8D%95%E5%85%83%20%E8%82%A1%E7%A5%A8%E6%95%B0%E6%8D%AEScrapy%E7%88%AC%E8%99%AB%EF%BC%89/"/>
+    <id>https://jluliyuxi.github.io/2020/07/03/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC4%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6%20%E7%AC%AC%E5%8D%81%E4%B8%80%E5%8D%95%E5%85%83%20%E8%82%A1%E7%A5%A8%E6%95%B0%E6%8D%AEScrapy%E7%88%AC%E8%99%AB%EF%BC%89/</id>
+    <published>2020-07-03T03:11:31.724Z</published>
+    <updated>2020-07-03T03:22:29.853Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="股票数据Scrapy爬虫实例介绍"><a href="#股票数据Scrapy爬虫实例介绍" class="headerlink" title="股票数据Scrapy爬虫实例介绍"></a>股票数据Scrapy爬虫实例介绍</h1><hr><p>获取股票列表:     </p><p>东方财富网: <a href="http://quote.eastmoney.com/stocklist.html" target="_blank" rel="noopener">http://quote.eastmoney.com/stocklist.html</a>        </p><p>获取个股信息:     </p><p>百度股票: <a href="https://gupiao.baidu.com/stock/" target="_blank" rel="noopener">https://gupiao.baidu.com/stock/</a>       </p><p>单个股票: <a href="https://gupiao.baidu.com/stock/sz002439.html" target="_blank" rel="noopener">https://gupiao.baidu.com/stock/sz002439.html</a>      </p><h1 id="股票数据Scrapy爬虫实例编写"><a href="#股票数据Scrapy爬虫实例编写" class="headerlink" title="股票数据Scrapy爬虫实例编写"></a>股票数据Scrapy爬虫实例编写</h1><h2 id="Stocks-py"><a href="#Stocks-py" class="headerlink" title="Stocks.py"></a>Stocks.py</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">import scrapy</span><br><span class="line">import re</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class StocksSpider(scrapy.Spider):</span><br><span class="line">    name &#x3D; &quot;stocks&quot;</span><br><span class="line">    start_urls &#x3D; [&#39;https:&#x2F;&#x2F;quote.eastmoney.com&#x2F;stocklist.html&#39;]</span><br><span class="line"> </span><br><span class="line">    def parse(self, response):</span><br><span class="line">        for href in response.css(&#39;a::attr(href)&#39;).extract():</span><br><span class="line">            try:</span><br><span class="line">                stock &#x3D; re.findall(r&quot;[s][hz]\d&#123;6&#125;&quot;, href)[0]</span><br><span class="line">                url &#x3D; &#39;https:&#x2F;&#x2F;gupiao.baidu.com&#x2F;stock&#x2F;&#39; + stock + &#39;.html&#39;</span><br><span class="line">                yield scrapy.Request(url, callback&#x3D;self.parse_stock)</span><br><span class="line">            except:</span><br><span class="line">                continue</span><br><span class="line"> </span><br><span class="line">    def parse_stock(self, response):</span><br><span class="line">        infoDict &#x3D; &#123;&#125;</span><br><span class="line">        stockInfo &#x3D; response.css(&#39;.stock-bets&#39;)</span><br><span class="line">        name &#x3D; stockInfo.css(&#39;.bets-name&#39;).extract()[0]</span><br><span class="line">        keyList &#x3D; stockInfo.css(&#39;dt&#39;).extract()</span><br><span class="line">        valueList &#x3D; stockInfo.css(&#39;dd&#39;).extract()</span><br><span class="line">        for i in range(len(keyList)):</span><br><span class="line">            key &#x3D; re.findall(r&#39;&gt;.*&lt;&#x2F;dt&gt;&#39;, keyList[i])[0][1:-5]</span><br><span class="line">            try:</span><br><span class="line">                val &#x3D; re.findall(r&#39;\d+\.?.*&lt;&#x2F;dd&gt;&#39;, valueList[i])[0][0:-5]</span><br><span class="line">            except:</span><br><span class="line">                val &#x3D; &#39;--&#39;</span><br><span class="line">            infoDict[key]&#x3D;val</span><br><span class="line"> </span><br><span class="line">        infoDict.update(</span><br><span class="line">            &#123;&#39;股票名称&#39;: re.findall(&#39;\s.*\(&#39;,name)[0].split()[0] + \</span><br><span class="line">             re.findall(&#39;\&gt;.*\&lt;&#39;, name)[0][1:-1]&#125;)</span><br><span class="line">        yield infoDict</span><br></pre></td></tr></table></figure><h2 id="Pipelines-py"><a href="#Pipelines-py" class="headerlink" title="Pipelines.py"></a>Pipelines.py</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"> </span><br><span class="line"># Define your item pipelines here</span><br><span class="line">#</span><br><span class="line"># Don&#39;t forget to add your pipeline to the ITEM_PIPELINES setting</span><br><span class="line"># See: https:&#x2F;&#x2F;doc.scrapy.org&#x2F;en&#x2F;latest&#x2F;topics&#x2F;item-pipeline.html</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">class BaidustocksPipeline(object):</span><br><span class="line">    def process_item(self, item, spider):</span><br><span class="line">        return item</span><br><span class="line"> </span><br><span class="line">class BaidustocksInfoPipeline(object):</span><br><span class="line">    def open_spider(self, spider):</span><br><span class="line">        self.f &#x3D; open(&#39;BaiduStockInfo.txt&#39;, &#39;w&#39;)</span><br><span class="line"> </span><br><span class="line">    def close_spider(self, spider):</span><br><span class="line">        self.f.close()</span><br><span class="line"> </span><br><span class="line">    def process_item(self, item, spider):</span><br><span class="line">        try:</span><br><span class="line">            line &#x3D; str(dict(item)) + &#39;\n&#39;</span><br><span class="line">            self.f.write(line)</span><br><span class="line">        except:</span><br><span class="line">            pass</span><br><span class="line">        return item</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;股票数据Scrapy爬虫实例介绍&quot;&gt;&lt;a href=&quot;#股票数据Scrapy爬虫实例介绍&quot; class=&quot;headerlink&quot; title=&quot;股票数据Scrapy爬虫实例介绍&quot;&gt;&lt;/a&gt;股票数据Scrapy爬虫实例介绍&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;获取股票列表:  
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Python网络爬虫与信息提取（第4周 网络爬虫框架 第十一单元 Scrapy爬虫基本使用）</title>
