@@ -8,7 +8,169 @@
     noSupport: '浏览器不支持'
   }
 } </script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="LyC's Blog" type="application/atom+xml">
-</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://i.loli.net/2020/05/17/HbaOsFvjp8c9MRE.jpg"></div><div class="author-info__name text-center">LyC</div><div class="author-info__description text-center">药学 自由人 爱好者</div><div class="follow-button"><a href="https://jluliyuxi.github.io/">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">16</span></a></div></div></div><nav id="nav" style="background-image: url(https://i.loli.net/2020/05/12/jFsUgX9TBbnQu2o.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">LyC's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="site-info"><div id="site-title">LyC's Blog</div><div id="site-sub-title">莫道君行早 更有早行人</div><div id="site-social-icons"><a class="social-icon" href="https://github.com/JLUliyuxi || github" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-github fa"></i></a><a class="social-icon" href="https://weibo.com/3687299900/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo || weibo" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-weibo fa"></i></a><a class="social-icon" href="https://www.google.com || chrome" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-chrome fa"></i></a></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/07/11/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC1%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E8%A1%A8%E7%A4%BA%20%E5%8D%95%E5%85%83%E4%B8%80%20NumPy%E5%BA%93%E5%85%A5%E9%97%A8%EF%BC%89/">Python数据分析与展示（第1周 数据分析之表示 单元一 NumPy库入门）</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-07-11</time><div class="content"><h1 id="数据的维度"><a href="#数据的维度" class="headerlink" title="数据的维度"></a>数据的维度</h1><p><strong>维度</strong>：一组数据的组织形式        </p>
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://i.loli.net/2020/05/17/HbaOsFvjp8c9MRE.jpg"></div><div class="author-info__name text-center">LyC</div><div class="author-info__description text-center">药学 自由人 爱好者</div><div class="follow-button"><a href="https://jluliyuxi.github.io/">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">17</span></a></div></div></div><nav id="nav" style="background-image: url(https://i.loli.net/2020/05/12/jFsUgX9TBbnQu2o.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">LyC's Blog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="site-info"><div id="site-title">LyC's Blog</div><div id="site-sub-title">莫道君行早 更有早行人</div><div id="site-social-icons"><a class="social-icon" href="https://github.com/JLUliyuxi || github" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-github fa"></i></a><a class="social-icon" href="https://weibo.com/3687299900/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo || weibo" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-weibo fa"></i></a><a class="social-icon" href="https://www.google.com || chrome" target="_blank" rel="noreferrer noopener nofollow"><i class="fa-chrome fa"></i></a></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/07/12/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC1%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E8%A1%A8%E7%A4%BA%20%E5%8D%95%E5%85%83%E4%BA%8C%20NumPy%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E5%87%BD%E6%95%B0%EF%BC%89/">Python数据分析与展示（第1周 数据分析之表示 单元二 NumPy数据存储与函数）</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-07-12</time><div class="content"><h1 id="数据的CSV文件存取"><a href="#数据的CSV文件存取" class="headerlink" title="数据的CSV文件存取"></a>数据的CSV文件存取</h1><p><strong>CSV(Comma-Separated Value,逗号分隔值)</strong>        </p>
+<h2 id="将数据写入CSV文件"><a href="#将数据写入CSV文件" class="headerlink" title="将数据写入CSV文件"></a>将数据写入CSV文件</h2><p><code>np.savetxt(frame,array,fmt=&#39;%.18e&#39;,delimiter=None)</code>        </p>
+<blockquote>
+<p><strong>frame</strong>:文件、字符串或产生器，可以是.gz或.bz2的压缩文件<br><strong>array</strong>:存入文件的数组<br><strong>fmt</strong>:写入文件的格式，例如：%d %.2f %.18e<br><strong>delimiter</strong>:分割字符串，默认是任何空格     </p>
+</blockquote>
+<h2 id="将CSV文件数据读入numpy数组类型"><a href="#将CSV文件数据读入numpy数组类型" class="headerlink" title="将CSV文件数据读入numpy数组类型"></a>将CSV文件数据读入numpy数组类型</h2><p><code>np.loadtxt(frame,dtype=np.float,delimiter=None,unpack=False</code>       </p>
+<blockquote>
+<p><strong>frame</strong>:文件、字符串或产生器，可以是.gz或.bz2的压缩文件<br><strong>dtype</strong>:数据类型，可选，默认是浮点数类型<br><strong>delimiter</strong>:分割字符串，默认是任何空格<br><strong>unpack</strong>:如果True，读入属性将分别写入不同变量        </p>
+</blockquote>
+<h1 id="多维数据的存取"><a href="#多维数据的存取" class="headerlink" title="多维数据的存取"></a>多维数据的存取</h1><h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><h3 id="a-tofile-frame-sep-39-39-format-39-s-39"><a href="#a-tofile-frame-sep-39-39-format-39-s-39" class="headerlink" title="a.tofile(frame,sep=&#39;&#39;,format=&#39;%s&#39;)"></a><code>a.tofile(frame,sep=&#39;&#39;,format=&#39;%s&#39;)</code></h3><blockquote>
+<p><strong>frame</strong>:文件、字符串<br><strong>sep</strong>:数据分割字符串，如果是空串，写入文件为二进制<br><strong>format</strong>:写入数据的格式     </p>
+</blockquote>
+<h3 id="np-fromfile-frame-dtype-float-count-1-sep-39-39"><a href="#np-fromfile-frame-dtype-float-count-1-sep-39-39" class="headerlink" title="np.fromfile(frame,dtype=float,count=-1,sep=&#39;&#39;)"></a><code>np.fromfile(frame,dtype=float,count=-1,sep=&#39;&#39;)</code></h3><blockquote>
+<p><strong>frame</strong>:文件、字符串<br><strong>dtype</strong>:读取的数据类型<br><strong>count</strong>:读入元素个数，-1表示读入整个文件<br><strong>sep</strong>:数据分割字符串，如果是空串，写入文件为二进制     </p>
+</blockquote>
+<p><strong><em>需要注意：</em></strong><br><strong><em>该方法需要读取时知道存入文件时数组的维度和元素类型</em></strong><br><strong><em>a.tofile()和np.fromfile()需要配合使用</em></strong><br><strong><em>可以通过元数据文件来存储额外信息</em></strong>      </p>
+<h2 id="方法二：NumPy的便携文件存取"><a href="#方法二：NumPy的便携文件存取" class="headerlink" title="方法二：NumPy的便携文件存取"></a>方法二：NumPy的便携文件存取</h2><h3 id="np-save-fname-array-或-np-savez-fname-array"><a href="#np-save-fname-array-或-np-savez-fname-array" class="headerlink" title="np.save(fname,array) 或 np.savez(fname,array)"></a><code>np.save(fname,array)</code> 或 <code>np.savez(fname,array)</code></h3><blockquote>
+<p><strong>frame</strong>:文件名，以.npy为扩展名，压缩扩展名为.npz<br><strong>array</strong>:数组变量     </p>
+</blockquote>
+<h3 id="np-load-fname"><a href="#np-load-fname" class="headerlink" title="np.load(fname)"></a><code>np.load(fname)</code></h3><blockquote>
+<p><strong>frame</strong>:文件名，以.npy为扩展名，压缩扩展名为.npz         </p>
+</blockquote>
+<h1 id="NumPy的随机数函数"><a href="#NumPy的随机数函数" class="headerlink" title="NumPy的随机数函数"></a>NumPy的随机数函数</h1><p>NumPy的random子库      </p>
+<p><strong>np.random的随机数函数(1)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">rand(d0,d1,..,dn)</td>
+<td align="center">根据d0-dn创建随机数数组，浮点数，[0,1)，均匀分布</td>
+</tr>
+<tr>
+<td align="center">randn(d0,d1,..,dn)</td>
+<td align="center">根据d0-dn创建随机数数组，标准正态分布</td>
+</tr>
+<tr>
+<td align="center">randint(low[,high,shape])</td>
+<td align="center">根据shape创建随机整数或整数数组，范围是[low, high)</td>
+</tr>
+<tr>
+<td align="center">seed(s)</td>
+<td align="center">随机数种子，s是给定的种子值</td>
+</tr>
+</tbody></table>
+<p><strong>np.random的随机数函数(2)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">shuffle(a)</td>
+<td align="center">根据数组a的第1轴进行随排列，改变数组x</td>
+</tr>
+<tr>
+<td align="center">permutation(a)</td>
+<td align="center">根据数组a的第1轴产生一个新的乱序数组，不改变数组x</td>
+</tr>
+<tr>
+<td align="center">choice(a[,size,replace,p])</td>
+<td align="center">从一维数组a中以概率p抽取元素，形成size形状新数组,replace表示是否可以重用元素，默认为False</td>
+</tr>
+</tbody></table>
+<p><strong>np.random的随机数函数(3)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">uniform(low,high,size)</td>
+<td align="center">产生具有均匀分布的数组，low起始值，high结束值，size形状</td>
+</tr>
+<tr>
+<td align="center">normal(loc,scale,size)</td>
+<td align="center">产生具有正态分布的数组，loc均值，scale标准差，size形状</td>
+</tr>
+<tr>
+<td align="center">poisson(lam,size)</td>
+<td align="center">产生具有泊松分布的数组，lam随机事件发生率，size形状</td>
+</tr>
+</tbody></table>
+<h1 id="NumPy的统计函数"><a href="#NumPy的统计函数" class="headerlink" title="NumPy的统计函数"></a>NumPy的统计函数</h1><p><strong>np.random的统计函数(1)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">sum(a,axis=None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素之和，axis整数或元组</td>
+</tr>
+<tr>
+<td align="center">mean(a,axis=None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素的期望，axis整数或元组</td>
+</tr>
+<tr>
+<td align="center">average(a,axis=None,weights=None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素的加权平均值</td>
+</tr>
+<tr>
+<td align="center">std(a,axis=None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素的标准差</td>
+</tr>
+<tr>
+<td align="center">var(a,axis=None)</td>
+<td align="center">根据给定轴axis计算数组a相关元素的方差</td>
+</tr>
+</tbody></table>
+<p><strong>np.random的统计函数(2)</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">min(a) max(a)</td>
+<td align="center">计算数组a中元素的最小值、最大值</td>
+</tr>
+<tr>
+<td align="center">argmin(a) argmax(a)</td>
+<td align="center">计算数组a中元素最小值、最大值的降一维后下标</td>
+</tr>
+<tr>
+<td align="center">unravel_index(index,shape)</td>
+<td align="center">根据shape将一维下标index转换成多维下标</td>
+</tr>
+<tr>
+<td align="center">ptp(a)</td>
+<td align="center">计算数组a中元素最大值与最小值的差</td>
+</tr>
+<tr>
+<td align="center">median(a)</td>
+<td align="center">计算数组a中元素的中位数(中值)</td>
+</tr>
+</tbody></table>
+<h1 id="NumPy的梯度函数"><a href="#NumPy的梯度函数" class="headerlink" title="NumPy的梯度函数"></a>NumPy的梯度函数</h1><p>NumPy的梯度函数只有一个  </p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">np.gradient()</td>
+<td align="center">计算数组f中元素的梯度，当f为多维时，返回每个维度梯度</td>
+</tr>
+</tbody></table>
+<p><strong>梯度：连续值之间的变化率，即斜率</strong></p>
+</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/07/11/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC1%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E8%A1%A8%E7%A4%BA%20%E5%8D%95%E5%85%83%E4%B8%80%20NumPy%E5%BA%93%E5%85%A5%E9%97%A8%EF%BC%89/">Python数据分析与展示（第1周 数据分析之表示 单元一 NumPy库入门）</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-07-11</time><div class="content"><h1 id="数据的维度"><a href="#数据的维度" class="headerlink" title="数据的维度"></a>数据的维度</h1><p><strong>维度</strong>：一组数据的组织形式        </p>
 <p>一维数据：由对等关系的有序或无序数据构成，采用线性方式组织。      </p>
 <p>列表数据类型可以不同，数组数据类型必须相同。      </p>
 <p>二维数据：由多个一维数据构成，是一维数据的组合形式。      </p>
@@ -848,55 +1010,6 @@
 
 <p><strong>输出结果</strong></p>
 <p><img src="https://i.loli.net/2020/06/16/l6EbVGoksfxhXza.png" alt="输出结果"></p>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/06/16/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC2%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E6%8F%90%E5%8F%96%20%E5%8D%95%E5%85%83%E4%BA%94%20%E4%BF%A1%E6%81%AF%E7%BB%84%E7%BB%87%E4%B8%8E%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95%EF%BC%89/">Python网络爬虫与信息提取（第2周 网络爬虫提取 单元五 信息组织与提取方法）</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-16</time><div class="content"><h1 id="信息标记的三种形式"><a href="#信息标记的三种形式" class="headerlink" title="信息标记的三种形式"></a>信息标记的三种形式</h1><h2 id="XML（eXtensible-Markup-Language）"><a href="#XML（eXtensible-Markup-Language）" class="headerlink" title="XML（eXtensible Markup Language）"></a>XML（eXtensible Markup Language）</h2><p>标签中含有内容时：<code>&lt;name&gt; ... &lt;/name&gt;</code>  </p>
-<p>标签中不含内容时：<code>&lt;name/&gt;</code>     </p>
-<p>注释：<code>&lt;!-- --&gt;</code></p>
-<h2 id="JSON-JavaScript-Object-Notation"><a href="#JSON-JavaScript-Object-Notation" class="headerlink" title="JSON(JavaScript Object Notation)"></a>JSON(JavaScript Object Notation)</h2><p>“key” : “value”<br>“key” : [“value1”,”value2”]<br>“key” : {“subkey”:”subvalue”}<br>“key” : {<br>&ensp;&ensp;”name1” : “value1”<br>&ensp;&ensp;”name2” : “value2”<br>}   </p>
-<h2 id="YAML"><a href="#YAML" class="headerlink" title="YAML"></a>YAML</h2><p><strong>无类型键值对</strong> key:name     </p>
-<p><strong>通过缩进表达所属关系</strong>：<br>name :<br>&ensp;&ensp;newname :<br>&ensp;&ensp;oldname :     </p>
-<p><strong>用-号表达并列关系</strong>：<br>name :<br>-name1<br>-name2      </p>
-<p><strong>用|表示整块数据 #表示注释</strong>      </p>
-<h1 id="三种信息标记形式的比较"><a href="#三种信息标记形式的比较" class="headerlink" title="三种信息标记形式的比较"></a>三种信息标记形式的比较</h1><p>XML Internet.上的信息交互与传递。<br>JSON 移动应用云端和节点的信息通信，无注释。<br>YAML 各类系统的配置文件，有注释易读。       </p>
-<h1 id="信息提取的一般方法"><a href="#信息提取的一般方法" class="headerlink" title="信息提取的一般方法"></a>信息提取的一般方法</h1><h2 id="方法一-完整解析信息的标记形式，再提取关键信息。"><a href="#方法一-完整解析信息的标记形式，再提取关键信息。" class="headerlink" title="方法一:完整解析信息的标记形式，再提取关键信息。"></a>方法一:完整解析信息的标记形式，再提取关键信息。</h2><p>XML JSON YAML<br><strong>需要标记解析器</strong><br>例如: bs4库的标签树遍历<br>优点:信息解析准确<br>缺点:提取过程繁琐，速度慢。      </p>
-<h2 id="方法二-无视标记形式，直接搜索关键信息。"><a href="#方法二-无视标记形式，直接搜索关键信息。" class="headerlink" title="方法二:无视标记形式，直接搜索关键信息。"></a>方法二:无视标记形式，直接搜索关键信息。</h2><p><strong>搜索</strong><br>对信息的文本查找函数即可。<br>优点:提取过程简洁，速度较快。<br>缺点:提取结果准确性与信息内容相关。      </p>
-<h1 id="基于bs4库的HTML内容查找方法"><a href="#基于bs4库的HTML内容查找方法" class="headerlink" title="基于bs4库的HTML内容查找方法"></a>基于bs4库的HTML内容查找方法</h1><p><strong>&lt; &gt;.find_ all(name, attrs, recursive, string, **kwargs)</strong><br>返回一个列表类型，存储查找的结果。<br><strong>name</strong>:对标签名称的检索字符串。<br><strong>attrs</strong>:对标签属性值的检索字符串，可标注属性检索。<br><strong>recursive</strong>:是否对子孙全部检索，默认True。<br><strong>string: &lt; &gt;… &lt; / &gt;</strong>:中字符串区域的检索字符串。      </p>
-<p><strong>扩展方法</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">方法</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&lt;&gt;.find()</td>
-<td align="center">搜索且只返回一个结果，字符串类型，同.find_all()参数</td>
-</tr>
-<tr>
-<td align="center">&lt;&gt;.find_parents()</td>
-<td align="center">在先辈节点中搜索，返回列表类型，同.find_all()参数</td>
-</tr>
-<tr>
-<td align="center">&lt;&gt;.find_parent()</td>
-<td align="center">在先辈节点中返回一个结果，字符串类型，同.find()参数</td>
-</tr>
-<tr>
-<td align="center">&lt;&gt;.find_next_siblings()</td>
-<td align="center">在后续平行节点中搜索，返回列表类型，同.find_all()参数</td>
-</tr>
-<tr>
-<td align="center">&lt;&gt;.find_ next sibling()</td>
-<td align="center">在后续平行节点中返回一个结果，字符串类型,同.find()参数</td>
-</tr>
-<tr>
-<td align="center">&lt;&gt;.find_previous_siblings()</td>
-<td align="center">在前序平行节点中搜索，返回列表类型，同.find_all()参数</td>
-</tr>
-<tr>
-<td align="center">&lt;&gt;.find_previous_sibling()</td>
-<td align="center">在前序平行节点中返回一个结果，字符串类型，同.find()参数</td>
-</tr>
-</tbody></table>
 </div><hr></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://i.loli.net/2020/05/12/jFsUgX9TBbnQu2o.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2020 By LyC</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" data-click="false"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
   $('#nav').addClass('is-mobile')
   $('footer').addClass('is-mobile')
