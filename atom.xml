@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jluliyuxi.github.io/"/>
-  <updated>2020-07-21T01:02:47.627Z</updated>
+  <updated>2020-07-23T23:58:40.294Z</updated>
   <id>https://jluliyuxi.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python-Spyder光标在覆盖字符和插入模式间切换</title>
+    <link href="https://jluliyuxi.github.io/2020/07/24/Python-Spyder%E5%85%89%E6%A0%87%E5%9C%A8%E8%A6%86%E7%9B%96%E5%AD%97%E7%AC%A6%E5%92%8C%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F%E9%97%B4%E5%88%87%E6%8D%A2/"/>
+    <id>https://jluliyuxi.github.io/2020/07/24/Python-Spyder%E5%85%89%E6%A0%87%E5%9C%A8%E8%A6%86%E7%9B%96%E5%AD%97%E7%AC%A6%E5%92%8C%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F%E9%97%B4%E5%88%87%E6%8D%A2/</id>
+    <published>2020-07-23T23:56:40.948Z</published>
+    <updated>2020-07-23T23:58:40.294Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>某天早上，在用spyder编写代码的时候        </p><p>光标突然改变了输入模式     </p><p>从插入模式变成了cmd的那种覆盖模式    </p><p><img src="https://i.loli.net/2020/07/24/ZbsiNkWLc4n93wB.png" alt="覆盖模式"></p><p>后来查了一下，发现了问题所在      </p><p><strong>可能是由于我误触了insert键所致</strong></p><h1 id="insert键功能"><a href="#insert键功能" class="headerlink" title="insert键功能"></a>insert键功能</h1><blockquote><p>鼠标点击可输入框后会出现闪动的光标. 一般情况下,Windows系统默认光标位置插入字符,而光标向后移动,即输入时对光标后字符无影响. 但是Insert是嵌入,即插入并覆盖,所以当按下Insert键后再输入,光标后的字符会被消去,即被当前输入字符替换掉,再次按下后则会还原到默认插入状态.</p></blockquote><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>在键盘最上面的一排的按键中，找到了<code>Ins F12</code>,应该就是所谓的<code>insert</code>键了    </p><p>按下去，光标确实切换了输入模式</p><p><img src="https://i.loli.net/2020/07/24/NvGkXAOyeHidPS4.png" alt="插入模式"></p><p>至此，问题得到了解决</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;p&gt;某天早上，在用spyder编写代码的时候        &lt;/p&gt;
+&lt;p&gt;光标突然改变了输入模式     &lt;/p&gt;
+&lt;p&gt;从插入模式变成了cm
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python数据分析与展示（第2周 数据分析之展示 单元五 Matplotlib基础绘图函数示例）</title>
+    <link href="https://jluliyuxi.github.io/2020/07/23/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC2%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E5%B1%95%E7%A4%BA%20%E5%8D%95%E5%85%83%E4%BA%94%20Matplotlib%E5%9F%BA%E7%A1%80%E7%BB%98%E5%9B%BE%E5%87%BD%E6%95%B0%E7%A4%BA%E4%BE%8B%EF%BC%89/"/>
+    <id>https://jluliyuxi.github.io/2020/07/23/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC2%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E5%B1%95%E7%A4%BA%20%E5%8D%95%E5%85%83%E4%BA%94%20Matplotlib%E5%9F%BA%E7%A1%80%E7%BB%98%E5%9B%BE%E5%87%BD%E6%95%B0%E7%A4%BA%E4%BE%8B%EF%BC%89/</id>
+    <published>2020-07-23T04:49:41.843Z</published>
+    <updated>2020-07-23T23:48:32.593Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="pyplot基础图表函数概述"><a href="#pyplot基础图表函数概述" class="headerlink" title="pyplot基础图表函数概述"></a>pyplot基础图表函数概述</h1><p><strong>大致地介绍基础图标，具体使用时，到<a href="https://matplotlib.org/" target="_blank" rel="noopener">matplotlib官网</a>查看官方文档学习</strong></p><table><thead><tr><th align="center">函数</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">plt.plot(x,y,fmt,…)</td><td align="center">绘制一个坐标图</td></tr><tr><td align="center">plt.boxplot(data,notch,position)</td><td align="center">绘制一个箱形图</td></tr><tr><td align="center">plt.bar(left,height,width,bottom)</td><td align="center">绘制一个条形图</td></tr><tr><td align="center">plt.barh(width,bottom,left,height)</td><td align="center">绘制一个横向条形图</td></tr><tr><td align="center">plt.polar(theta, r)</td><td align="center">绘制极坐标图</td></tr><tr><td align="center">plt.pie(data, explode)</td><td align="center">绘制饼图</td></tr><tr><td align="center">plt.psd(x,NFFT=256,pad_to,Fs)</td><td align="center">绘制功率谱密度图</td></tr><tr><td align="center">plt.specgram(x,NFFT=256,pad_to,F)</td><td align="center">绘制谱图</td></tr><tr><td align="center">plt.cohere(x,y,NFFT=256,Fs)</td><td align="center">绘制X-Y的相关性函数</td></tr><tr><td align="center">plt.scatter(x,y)</td><td align="center">绘制散点图，其中，x和y长度相同</td></tr><tr><td align="center">plt.step(x,y,where)</td><td align="center">绘制步阶图</td></tr><tr><td align="center">plt.hist(x,bins,normed)</td><td align="center">绘制直方图</td></tr><tr><td align="center">plt.contour(X,Y,Z,N)</td><td align="center">绘制等值图</td></tr><tr><td align="center">plt.vlines()</td><td align="center">绘制垂直图</td></tr><tr><td align="center">plt.stem(x,y,linefmt,markerfmt)</td><td align="center">绘制柴火图</td></tr><tr><td align="center">plt.plot_date()</td><td align="center">绘制数据日期</td></tr></tbody></table><h1 id="pyplot饼图的绘制"><a href="#pyplot饼图的绘制" class="headerlink" title="pyplot饼图的绘制"></a>pyplot饼图的绘制</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">labels &#x3D; &#39;Frogs&#39;, &#39;Hogs&#39;, &#39;Dogs&#39;, &#39;Logs&#39;</span><br><span class="line">sizes &#x3D; [15, 30, 40, 10]</span><br><span class="line">explode &#x3D; (0, 0.1, 0, 0) #&#39;Hogs&#39;需要突出</span><br><span class="line"></span><br><span class="line">plt.pie(sizes, explode&#x3D;explode, labels&#x3D;labels, autopct&#x3D;&#39;%1.1f%%&#39;, shadow&#x3D;False, startangle&#x3D;90)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p><strong>展示效果：</strong></p><p><img src="https://i.loli.net/2020/07/23/H3OE71FhYSsfeKl.png" alt="饼图">    </p><p><strong>正圆形的饼图</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">labels &#x3D; &#39;Frogs&#39;, &#39;Hogs&#39;, &#39;Dogs&#39;, &#39;Logs&#39;</span><br><span class="line">sizes &#x3D; [15, 30, 40, 10]</span><br><span class="line">explode &#x3D; (0, 0.1, 0, 0) #&#39;Hogs&#39;需要突出</span><br><span class="line"></span><br><span class="line">plt.pie(sizes, explode&#x3D;explode, labels&#x3D;labels, autopct&#x3D;&#39;%1.1f%%&#39;, shadow&#x3D;False, startangle&#x3D;90)</span><br><span class="line"></span><br><span class="line">plt.axis(&#39;equal&#39;) #要求绘制正圆形的饼图</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><h1 id="pyplot直方图的绘制"><a href="#pyplot直方图的绘制" class="headerlink" title="pyplot直方图的绘制"></a>pyplot直方图的绘制</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">np.random.seed(0)</span><br><span class="line">mu, sigma &#x3D; 100, 20 #均值和标准差</span><br><span class="line">a &#x3D; np.random.normal(mu, sigma, size&#x3D;100)</span><br><span class="line"></span><br><span class="line">plt.hist(a, 20, normed&#x3D;1, histtype&#x3D;&#39;stepfilled&#39;, facecolor&#x3D;&#39;b&#39;, alpha&#x3D;0.75) #第二个参数bin:直方图的个数</span><br><span class="line">plt.title(&#39;Histogram&#39;)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p><strong>展示效果：</strong></p><p><img src="https://i.loli.net/2020/07/24/GoqsJuWKBcR8Sky.png" alt="直方图"></p><h1 id="pyplot极坐标图的绘制"><a href="#pyplot极坐标图的绘制" class="headerlink" title="pyplot极坐标图的绘制"></a>pyplot极坐标图的绘制</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">N &#x3D; 20 #数据的个数</span><br><span class="line">theta &#x3D; np.linspace(0.0, 2*np.pi, N, endpoint&#x3D;False) #从[0,2Π]等分</span><br><span class="line">radii &#x3D; 10 * np.random.rand(N)</span><br><span class="line">width &#x3D; np.pi &#x2F; 4*np.random.rand(N)</span><br><span class="line"></span><br><span class="line">ax &#x3D; plt.subplot(111,projection&#x3D;&#39;polar&#39;) #将绘图区域分成相应的网格，&#39;polar&#39;即极坐标图</span><br><span class="line">bars &#x3D; ax.bar(theta,radii,width&#x3D;width,bottom&#x3D;0.0)</span><br><span class="line"></span><br><span class="line">for r,bar in zip(radii, bars):</span><br><span class="line">    bar.set_facecolor(plt.cm.viridis(r &#x2F; 10.))</span><br><span class="line">    bar.set_alpha(0.5)</span><br><span class="line">    </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p><strong>展示效果：</strong></p><p><img src="https://i.loli.net/2020/07/24/mIhJFRNfzYTs4Bg.png" alt="极坐标图"></p><h1 id="pyplot散点图的绘制"><a href="#pyplot散点图的绘制" class="headerlink" title="pyplot散点图的绘制"></a>pyplot散点图的绘制</h1><p><strong>使用面向对象的方式绘制散点图</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">fig, ax &#x3D; plt.subplots()</span><br><span class="line">ax.plot(10*np.random.randn(100), &#39;o&#39;)</span><br><span class="line">ax.set_title(&#39;simple Scatter&#39;)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p><strong>展示效果：</strong></p><p><img src="https://i.loli.net/2020/07/24/9fqwrSXNLCWmAFK.png" alt="散点图"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;pyplot基础图表函数概述&quot;&gt;&lt;a href=&quot;#pyplot基础图表函数概述&quot; class=&quot;headerlink&quot; title=&quot;pyplot基础图表函数概述&quot;&gt;&lt;/a&gt;pyplot基础图表函数概述&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;大致地介绍基础图标，具体使用
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Python数据分析与展示（第2周 数据分析之展示 单元四 Matplotlib库入门）</title>
@@ -416,28 +462,6 @@
       
       
         &lt;h1 id=&quot;Python-Selenium实现吉林大学健康申报自动打卡&quot;&gt;&lt;a href=&quot;#Python-Selenium实现吉林大学健康申报自动打卡&quot; class=&quot;headerlink&quot; title=&quot;Python+Selenium实现吉林大学健康申报自动打卡&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://jluliyuxi.github.io/2020/05/12/hello-world/"/>
-    <id>https://jluliyuxi.github.io/2020/05/12/hello-world/</id>
-    <published>2020-05-12T03:40:03.878Z</published>
-    <updated>2020-05-28T11:14:02.049Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
     
     </summary>
