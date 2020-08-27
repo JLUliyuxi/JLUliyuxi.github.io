@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jluliyuxi.github.io/"/>
-  <updated>2020-07-25T00:37:01.046Z</updated>
+  <updated>2020-08-27T08:48:34.206Z</updated>
   <id>https://jluliyuxi.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python数据分析与展示（第3周 数据分析之概要 单元7 Pandas库入门）</title>
+    <link href="https://jluliyuxi.github.io/2020/07/26/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC3%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E6%A6%82%E8%A6%81%20%E5%8D%95%E5%85%837%20Pandas%E5%BA%93%E5%85%A5%E9%97%A8%EF%BC%89/"/>
+    <id>https://jluliyuxi.github.io/2020/07/26/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%B1%95%E7%A4%BA%EF%BC%88%E7%AC%AC3%E5%91%A8%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B9%8B%E6%A6%82%E8%A6%81%20%E5%8D%95%E5%85%837%20Pandas%E5%BA%93%E5%85%A5%E9%97%A8%EF%BC%89/</id>
+    <published>2020-07-25T23:50:28.384Z</published>
+    <updated>2020-08-27T08:48:34.206Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="本周课程导学"><a href="#本周课程导学" class="headerlink" title="本周课程导学"></a>本周课程导学</h1><p><strong>Pandas库的两个基本数据类型</strong></p><blockquote><p>series 一维数据类型<br>DataFrame 二维到多维数据类型</p></blockquote><p>基于上述数据的各类操作：<strong>基本操作</strong>、<strong>运算操作</strong>、<strong>特征类操作</strong>、<strong>关联类操作</strong>       </p><p>利用Pandas库对数据进行摘要，提取数据的一些基本特征    </p><h1 id="Pandas库介绍"><a href="#Pandas库介绍" class="headerlink" title="Pandas库介绍"></a>Pandas库介绍</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a href="http://pandas.pydata.org" target="_blank" rel="noopener">Pandas库官方网站</a>     </p><p>Pandas是Python第三方库，提供高性能易用数据类型和分析工具      </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure><p><strong>Pandas是基于NumPy的，常与Numpy和Matplotlib一起使用</strong>      </p><h2 id="Pandas库小测"><a href="#Pandas库小测" class="headerlink" title="Pandas库小测"></a>Pandas库小测</h2><p><strong>Pandas库小测</strong>       </p><p><img src="https://i.loli.net/2020/07/26/gnBvKcjoId8MqXm.png" alt="Pandas库小测"></p><p>左边的数字是索引，右边的数字是值        </p><p><strong>d.cumsum()计算前N项的累加和</strong></p><p><img src="https://i.loli.net/2020/07/26/wCyxSd36XlzrLG2.png" alt="计算前N项的累加和"> </p><h2 id="NumPy和Pandas的比较"><a href="#NumPy和Pandas的比较" class="headerlink" title="NumPy和Pandas的比较"></a>NumPy和Pandas的比较</h2><table><thead><tr><th align="center">NumPy</th><th align="center">Pandas</th></tr></thead><tbody><tr><td align="center">基础数据类型</td><td align="center">扩展数据类型</td></tr><tr><td align="center">关注数据的结构表达</td><td align="center">关注数据的应用表达</td></tr></tbody></table><h1 id="Pandas库的Series类型"><a href="#Pandas库的Series类型" class="headerlink" title="Pandas库的Series类型"></a>Pandas库的Series类型</h1><h2 id="Series类型"><a href="#Series类型" class="headerlink" title="Series类型"></a>Series类型</h2><p><strong>Series类型由一组数据及与之相关的数据索引组成</strong></p><p>index_0 →→ data_a<br>index_1 →→ data_b<br>index_2 →→ data_c<br>index_3 →→ data_d<br>索引 →→→→→→→→ 数据      </p><h3 id="自动索引"><a href="#自动索引" class="headerlink" title="自动索引"></a>自动索引</h3><p><img src="https://i.loli.net/2020/07/26/EizY7WhmMJZlfTK.png" alt="自动索引"></p><h3 id="自定义索引"><a href="#自定义索引" class="headerlink" title="自定义索引"></a>自定义索引</h3><p><img src="https://i.loli.net/2020/07/26/swfI1uQ3HCchoRS.png" alt="自定义索引"></p><h3 id="Series类型的创建"><a href="#Series类型的创建" class="headerlink" title="Series类型的创建"></a>Series类型的创建</h3><p>Series类型可以由如下类型创建       </p><blockquote><p>Python列表<br>标量值<br>Python字典<br>ndarray<br>其他函数       </p></blockquote><h4 id="从标量值创建-必须有index"><a href="#从标量值创建-必须有index" class="headerlink" title="从标量值创建(必须有index=)"></a>从标量值创建(必须有index=)</h4><p><img src="https://i.loli.net/2020/07/26/UHQnKOLTgkVyW8Y.png" alt="从标量值创建"></p><p><strong>不能省略索引index=</strong>        </p><h4 id="从字典类型创建"><a href="#从字典类型创建" class="headerlink" title="从字典类型创建"></a>从字典类型创建</h4><p><img src="https://i.loli.net/2020/07/26/qhwNSKVXEoY3UQT.png" alt="从字典类型创建">       </p><p><strong>index从字典中可以进行选择操作</strong></p><p><img src="https://i.loli.net/2020/07/26/b8hkIoyzpT9xSuf.png" alt="index的选择操作"></p><h4 id="从ndarray类型创建"><a href="#从ndarray类型创建" class="headerlink" title="从ndarray类型创建"></a>从ndarray类型创建</h4><p><img src="https://i.loli.net/2020/07/26/O7JUj4LFXAgDRu6.png" alt="从ndarray类型创建"></p><p><img src="https://i.loli.net/2020/07/26/Aqsu2zCDUljR4IQ.png" alt="自定义索引"> </p><h2 id="Series类型的基本操作"><a href="#Series类型的基本操作" class="headerlink" title="Series类型的基本操作"></a>Series类型的基本操作</h2><p>Series类型包括<strong>index</strong>和<strong>values</strong>两部分，操作类似于ndarray和Python列表类型       </p><p><img src="https://i.loli.net/2020/07/29/f2eV7sOTdjaYJH9.png" alt="">  </p><p><strong>Series类型=numpy的array类型+新建的index类型</strong></p><h3 id="Series类型的基本操作类似ndarray类型"><a href="#Series类型的基本操作类似ndarray类型" class="headerlink" title="Series类型的基本操作类似ndarray类型"></a>Series类型的基本操作类似ndarray类型</h3><blockquote><p>索引方法相同，采用[]        </p><p>NumPy中运算和操作可采用Series类型     </p><p>可以通过自定义索引的列表进行切片       </p><p>可以通过自动索引进行切片，若存在自定义索引，则一同被切片   </p></blockquote><h3 id="Series类型的基本操作类似Python字典类型"><a href="#Series类型的基本操作类似Python字典类型" class="headerlink" title="Series类型的基本操作类似Python字典类型"></a>Series类型的基本操作类似Python字典类型</h3><blockquote><p>通过自定义索引访问      </p><p>保留字in操作，返回True or False</p><p>使用.get()方法</p></blockquote><h3 id="Series类型对齐操作"><a href="#Series类型对齐操作" class="headerlink" title="Series类型对齐操作"></a>Series类型对齐操作</h3><p><strong>Series+Series</strong>       </p><p><img src="https://i.loli.net/2020/07/29/RibndlCIys5rBZe.png" alt="对齐操作">      </p><p>索引相同的可以相互计算     </p><p>索引不同的计算返回为空     </p><p><strong>Series在运算中会自动对齐不同索引的数据</strong>      </p><h3 id="Series类型的name属性"><a href="#Series类型的name属性" class="headerlink" title="Series类型的name属性"></a>Series类型的name属性</h3><p>Series对象和索引都可以有一个名字，存储在属性<code>.name</code>中           </p><p><img src="https://i.loli.net/2020/07/29/X3KANdxmnrCcYbS.png" alt="">      </p><h3 id="Series类型的修改"><a href="#Series类型的修改" class="headerlink" title="Series类型的修改"></a>Series类型的修改</h3><p>Series对象可以随时修改并即刻生效     </p><p><img src="https://i.loli.net/2020/07/29/fJtN2mCzyL75Xlj.png" alt="">      </p><h1 id="Pandas库的DataFrame类型"><a href="#Pandas库的DataFrame类型" class="headerlink" title="Pandas库的DataFrame类型"></a>Pandas库的DataFrame类型</h1><h2 id="DataFrame类型"><a href="#DataFrame类型" class="headerlink" title="DataFrame类型"></a>DataFrame类型</h2><p><strong>DataFrame类型由共用相同索引的一组列组成</strong>        </p><p><img src="https://i.loli.net/2020/07/29/bIi2WkxFczSMABv.png" alt="">      </p><p>DataFrame是一个表格型的数据类型，每列值类型可以不同      </p><p>DataFrame既有行索引(index)，又有列索引(column)     </p><p>DataFrame常用于表达二维数据，但可以表达多维数据        </p><p>DataFrame类型可以由如下类型来创建：      </p><blockquote><p>二维ndarray对象<br>由一维ndarray、列表、字典、元组或Series构成的字典<br>Series构成的字典<br>其他的DataFrme类型          </p></blockquote><p><strong>DataFrame是二维带“标签”的数组</strong><br><img src="https://i.loli.net/2020/08/26/UFR6r9cqm3jQXdH.png" alt=""><br><strong>DataFrame基本操作类似Series，依据行列索引</strong>        </p><h1 id="Pandas库的数据类型操作"><a href="#Pandas库的数据类型操作" class="headerlink" title="Pandas库的数据类型操作"></a>Pandas库的数据类型操作</h1><h2 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h2><p><strong>.reindex()能够改变或重排Series和DataFrame索引</strong><br><strong>.reindex(index=None,columns=None,…)的参数</strong></p><table><thead><tr><th align="center">参数</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">index, columns</td><td align="center">新的行列自定义索引</td></tr><tr><td align="center">fill_value</td><td align="center">重新索引中，用于填充缺失位置的值</td></tr><tr><td align="center">method</td><td align="center">填充方法，fill当前值向前填充，bfill向后填充</td></tr><tr><td align="center">limit</td><td align="center">最大填充量</td></tr><tr><td align="center">copy</td><td align="center">默认True,生成新的对象，False时， 新旧相等不复制</td></tr></tbody></table><p><strong>Series和DataFrame的索引是Index类型</strong><br><strong>Index类型是不可修改类型</strong>      </p><p><strong>对索引类型的常用操作</strong>      </p><table><thead><tr><th align="center">方法</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">.append(idx)</td><td align="center">连接另一个Index对象， 产生新的Index对象</td></tr><tr><td align="center">.diff(idx)</td><td align="center">计算差集，产生新的Index对象</td></tr><tr><td align="center">.intersection(idx)</td><td align="center">计算交集</td></tr><tr><td align="center">.union(idx)</td><td align="center">计算并集</td></tr><tr><td align="center">.delete(loc)</td><td align="center">删除loc位置处的元素</td></tr><tr><td align="center">.insert(loc,e)</td><td align="center">在loc位置增加一个 元素e</td></tr></tbody></table><h2 id="删除-drop"><a href="#删除-drop" class="headerlink" title="删除:drop"></a>删除:drop</h2><p><strong>.drop()能够删除Series和DataFrame指定行或列索引</strong></p><h1 id="Pandas库的数据类型运算"><a href="#Pandas库的数据类型运算" class="headerlink" title="Pandas库的数据类型运算"></a>Pandas库的数据类型运算</h1><p>Series和DataFrame计算符合 <strong>算术运算法则</strong>     </p><p>算术运算根据行列索引，补齐后运算，运算默认产生浮点数      </p><p>补齐时缺项填充NaN(空值)      </p><p>二维和一维、一维和零维间为广播运算       </p><p>采用<code>+-*/</code>符号进行的二元运算将会产生新的对象       </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;本周课程导学&quot;&gt;&lt;a href=&quot;#本周课程导学&quot; class=&quot;headerlink&quot; title=&quot;本周课程导学&quot;&gt;&lt;/a&gt;本周课程导学&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Pandas库的两个基本数据类型&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Python数据分析与展示（第2周 数据分析之展示 单元六 引力波的绘制）</title>
@@ -438,30 +462,6 @@
       
         &lt;h1 id=&quot;单元一-Requests库入门&quot;&gt;&lt;a href=&quot;#单元一-Requests库入门&quot; class=&quot;headerlink&quot; title=&quot;单元一 Requests库入门&quot;&gt;&lt;/a&gt;单元一 Requests库入门&lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&quot;Requests
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Python网络爬虫与信息提取（第0周 网络爬虫前奏）</title>
-    <link href="https://jluliyuxi.github.io/2020/06/07/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC0%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F%EF%BC%89/"/>
-    <id>https://jluliyuxi.github.io/2020/06/07/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96%EF%BC%88%E7%AC%AC0%E5%91%A8%20%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%89%8D%E5%A5%8F%EF%BC%89/</id>
-    <published>2020-06-07T13:50:21.805Z</published>
-    <updated>2020-06-23T09:10:58.076Z</updated>
-    
-    <content type="html"><![CDATA[<p>引言：最近在学习北理嵩天的这门课，便在个人博客里做一下笔记，方面以后学习使用。</p><hr><h1 id="1-课程内容导学"><a href="#1-课程内容导学" class="headerlink" title="1.课程内容导学"></a>1.课程内容导学</h1><h2 id="Requests库"><a href="#Requests库" class="headerlink" title="Requests库"></a>Requests库</h2><p>自动爬取HTML页面 自动网络提交请求</p><h2 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h2><p>网络爬虫排除协议</p><h2 id="Beautiful-Soup"><a href="#Beautiful-Soup" class="headerlink" title="Beautiful Soup"></a>Beautiful Soup</h2><p>解析HTML页面</p><h2 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h2><p>实战项目A/B</p><h2 id="Re"><a href="#Re" class="headerlink" title="Re"></a>Re</h2><p>正则表达式详解 提取页面关键信息</p><h2 id="Scrapy"><a href="#Scrapy" class="headerlink" title="Scrapy*"></a>Scrapy*</h2><p>网络爬虫原理介绍 专业爬虫框架介绍</p><hr><h1 id="2-IDE选择"><a href="#2-IDE选择" class="headerlink" title="2.IDE选择"></a>2.IDE选择</h1><p>目前我自己使用的文本工具类IDE是<strong><em>Sublime Text3</em></strong>,集成工具类IDE是<strong><em>PyCharm</em></strong>。   </p><p>等这个课学完，下一个学习数据处理和分析课，再学习使用<strong><em>Anaconda</em></strong>。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;引言：最近在学习北理嵩天的这门课，便在个人博客里做一下笔记，方面以后学习使用。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;1-课程内容导学&quot;&gt;&lt;a href=&quot;#1-课程内容导学&quot; class=&quot;headerlink&quot; title=&quot;1.课程内容导学&quot;&gt;&lt;/a&gt;1.课程内容导学&lt;/
       
     
     </summary>
