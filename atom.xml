@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jluliyuxi.github.io/"/>
-  <updated>2020-08-27T09:37:17.684Z</updated>
+  <updated>2020-08-30T04:05:14.598Z</updated>
   <id>https://jluliyuxi.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组运算示例之随机漫步</title>
+    <link href="https://jluliyuxi.github.io/2020/08/30/%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97%E7%A4%BA%E4%BE%8B%E4%B9%8B%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5/"/>
+    <id>https://jluliyuxi.github.io/2020/08/30/%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97%E7%A4%BA%E4%BE%8B%E4%B9%8B%E9%9A%8F%E6%9C%BA%E6%BC%AB%E6%AD%A5/</id>
+    <published>2020-08-30T03:46:57.392Z</published>
+    <updated>2020-08-30T04:05:14.598Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="随机漫步的概念"><a href="#随机漫步的概念" class="headerlink" title="随机漫步的概念"></a>随机漫步的概念</h1><p><strong>随机游走（random walk）也称随机漫步，随机行走等是指基于过去的表现，无法预测将来的发展步骤和方向。核心概念是指任何无规则行走者所带的守恒量都各自对应着一个扩散运输定律 ，接近于布朗运动，是布朗运动理想的数学状态。</strong></p><p><strong>本例为一个简单的随机漫步，从0开始，步长为1和-1，且出现的概率相等</strong></p><h1 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h1><p><strong>通过一个内置的random模块以纯Python的方式实现1000步的随机漫步</strong></p><h2 id="实现随机漫步"><a href="#实现随机漫步" class="headerlink" title="实现随机漫步"></a>实现随机漫步</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">position &#x3D; 0 #初始位置为0</span><br><span class="line">walk &#x3D;[position]</span><br><span class="line">steps &#x3D; 1000 #步数为1000步</span><br><span class="line">for i in range(steps):</span><br><span class="line">    step &#x3D; 1 if random.randint(0, 1) else -1</span><br><span class="line">    position +&#x3D; step</span><br><span class="line">    walk.append(position)</span><br></pre></td></tr></table></figure><h2 id="根据前100个随机漫步值生成折线图"><a href="#根据前100个随机漫步值生成折线图" class="headerlink" title="根据前100个随机漫步值生成折线图"></a>根据前100个随机漫步值生成折线图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(walk[:100])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2020/08/30/qo983VYAiQ16xEk.png" alt="随机漫步折线图"></p><h2 id="通过数组运算来实现随机漫步"><a href="#通过数组运算来实现随机漫步" class="headerlink" title="通过数组运算来实现随机漫步"></a>通过数组运算来实现随机漫步</h2><p><strong>从上述过程可以看出，这其实就是随机漫步中各步的累加和，可以用一个数组运算来实现。</strong>       </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nsteps &#x3D; 1000</span><br><span class="line">draws &#x3D; np.random.randint(0, 2 , size &#x3D; nsteps)</span><br><span class="line">steps &#x3D; np.where(draws &gt; 0, 1, -1)</span><br><span class="line">walk &#x3D; steps.cumsum()</span><br></pre></td></tr></table></figure><p><strong>用np.random模块一次性随机产生1000各“掷硬币”结果，将其分别设置为1或-1，然后计算累加和</strong>     </p><h2 id="通过数组运算求随机漫步的最大值和最小值"><a href="#通过数组运算求随机漫步的最大值和最小值" class="headerlink" title="通过数组运算求随机漫步的最大值和最小值"></a>通过数组运算求随机漫步的最大值和最小值</h2><p><strong>有了上述数据，我们可以直接求出模拟随机漫步的最大值和最小值</strong>       </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(walk.min())</span><br><span class="line">print(walk.max())</span><br></pre></td></tr></table></figure><h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">position &#x3D; 0 #初始位置为0</span><br><span class="line">walk &#x3D;[position]</span><br><span class="line">steps &#x3D; 1000 #步数为1000步</span><br><span class="line">for i in range(steps):</span><br><span class="line">    step &#x3D; 1 if random.randint(0, 1) else -1</span><br><span class="line">    position +&#x3D; step</span><br><span class="line">    walk.append(position)</span><br><span class="line"></span><br><span class="line">plt.plot(walk[:100])</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">nsteps &#x3D; 1000</span><br><span class="line">draws &#x3D; np.random.randint(0, 2 , size &#x3D; nsteps)</span><br><span class="line">steps &#x3D; np.where(draws &gt; 0, 1, -1)</span><br><span class="line">walk &#x3D; steps.cumsum()</span><br><span class="line"></span><br><span class="line">print(walk.min())</span><br><span class="line">print(walk.max())</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;随机漫步的概念&quot;&gt;&lt;a href=&quot;#随机漫步的概念&quot; class=&quot;headerlink&quot; title=&quot;随机漫步的概念&quot;&gt;&lt;/a&gt;随机漫步的概念&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;随机游走（random walk）也称随机漫步，随机行走等是指基于过去的表现，无法预
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Python数据分析与展示（第3周 数据分析之概要 单元8 Pandas数据特征分析）</title>
@@ -439,28 +461,6 @@
       
       
         &lt;h1 id=&quot;BeautifulSoup库的安装&quot;&gt;&lt;a href=&quot;#BeautifulSoup库的安装&quot; class=&quot;headerlink&quot; title=&quot;BeautifulSoup库的安装&quot;&gt;&lt;/a&gt;BeautifulSoup库的安装&lt;/h1&gt;&lt;p&gt;命令行内输入&lt;cod
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>到此为止</title>
-    <link href="https://jluliyuxi.github.io/2020/06/11/%E5%88%B0%E6%AD%A4%E4%B8%BA%E6%AD%A2/"/>
-    <id>https://jluliyuxi.github.io/2020/06/11/%E5%88%B0%E6%AD%A4%E4%B8%BA%E6%AD%A2/</id>
-    <published>2020-06-11T01:25:29.273Z</published>
-    <updated>2020-06-11T01:26:21.981Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="到此为止"><a href="#到此为止" class="headerlink" title="到此为止"></a>到此为止</h1><p>走到现在这一步其实在我的意料之中。<br>最开始接触你我以为你是一个开朗的女孩儿，但是越接触我越能感觉到你身上无止境的负能量和像无底洞一样的抱怨和埋怨。<br>每天都在说好烦啊烦死了。学习工作压力一大，烦死不爽和叹气就挂在你的嘴边。我就像你身边的垃圾桶，负面情绪的处理站。<br>我最难熬的是大一下的期末，11门考试排的很密，而且还要做物理实验。那一个月，你每天都在抱怨，抱怨完寝室抱怨实验，抱怨完实验抱怨考试。<br>我每天都在如履薄冰，一边承受着和你同样的压力，一边接受你每天高强度的抱怨和负面情绪，不敢疏导，生怕俩人又开始生气吵架。<br>可能是我在家太舒坦了，我现在真不知道我当时是怎么忍受过来而没有崩溃的。<br>哪怕就是心理医生，也很难承受这样的高强度折磨吧？<br>聊天搜素里输入一个烦字，一拉就是一串，密密麻麻。<br>记得就在几星期前，你又开始因为一些琐碎的小事各种怨气缠身，聊天记录全都是烦死了，我好烦，真烦。<br>我在电脑这边实在是忍受不了了，情绪突然变得暴躁，用拳头疯狂锤桌子，然后把手边的草稿纸撕得粉碎，无力地坐在椅子上，心跳很快。<br>然后我平静了一下，聊天框里打出：没事啦宝贝 不用烦。<br>换到一年前，我根本想不到我这种正能量充电器会变得这样狂躁。<br>我知道，这个情况不解决，疙瘩早晚在那里，迟早得要解决。<br>昨天你对我说，既然你接受不了我的负面情绪，就别再委屈自己了，对自己好一点？<br>嗯，好。        </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;到此为止&quot;&gt;&lt;a href=&quot;#到此为止&quot; class=&quot;headerlink&quot; title=&quot;到此为止&quot;&gt;&lt;/a&gt;到此为止&lt;/h1&gt;&lt;p&gt;走到现在这一步其实在我的意料之中。&lt;br&gt;最开始接触你我以为你是一个开朗的女孩儿，但是越接触我越能感觉到你身上无止境的负能量
       
     
     </summary>
